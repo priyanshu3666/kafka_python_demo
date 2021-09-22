@@ -8,6 +8,11 @@ def get_registered_user():
         'year':fake.year()
     }
     
+def get_movielist():
+    return {
+        "movie_name" : fake.name(),
+        "movie" : fake.url()
+    }
     
 if __name__ == '__main__':
-    print(get_registered_user())
+    print(get_movielist())
