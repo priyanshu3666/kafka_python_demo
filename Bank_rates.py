@@ -1,7 +1,4 @@
-'''
-This program is simply a bank rate od  different bank
-'''
-
+import  random
 class Bank():
     '''
     This class contain the rates of different bank
@@ -10,23 +7,14 @@ class Bank():
         self.name = "Bank Rates"
     
     def get_SBI(self):  #method about SBI rates 
-       return {
-           'Bank': "State Bank of India ",
-           'Rate' : 7
-       }
+       return random.randint(2,10)
 
     def get_BOB(self):
-         return {
-           'Bank': "Bank of Baroda ",
-           'Rate' : 7
-       }
+         return random.randint(2,10)
 
 
     def get_PNB(self):
-        return {
-            'Bank': "Punjab National Bank ",
-            'Rate': 12
-        }
+        return  random.randint(2,10)
         
 if __name__ =='__main__':
     bank_obj = Bank()
