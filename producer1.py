@@ -11,8 +11,8 @@ producer = KafkaProducer(bootstrap_servers = ['192.168.1.9:9092'],value_serializ
 
 
 if __name__ =='__main__':
-    for i in range(random.randint(5,11)):
+    for i in range(random.randint(70,100)):
         register_user = get_registered_user()
         print(register_user)
         producer.send("user_registration",register_user)
-        time.sleep(2)
+        time.sleep(4)
