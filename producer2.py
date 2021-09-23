@@ -1,6 +1,6 @@
 from kafka import KafkaProducer
 import json 
-from data import get_movielist
+from regex_1 import get_result
 import time
 import random
 
@@ -11,8 +11,7 @@ producer = KafkaProducer(bootstrap_servers = ['192.168.1.9:9092'],value_serializ
 
 
 if __name__ =='__main__':
-    for i in range(random.randint(5,11)):
-        movies_data = get_movielist()
-        print(movies_data)
-        producer.send("movies_url",movies_data)
+    for i in range(random.randint(4,7)):
+        print(get_result())
+        producer.send("regex_result",get_result())
         time.sleep(2)
