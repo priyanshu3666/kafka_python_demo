@@ -2,7 +2,7 @@ from random import randint
 from kafka import KafkaProducer
 import json 
 from Bank_rates import Bank
-
+import time
 def json_serializers(data):
     return json.dumps(data).encode("utf-8")
 
@@ -19,4 +19,6 @@ if __name__ =='__main__':
         'SBI_rates'  : bank_obj_consumer.get_SBI()            
         }
         print(bank_rates_dict)
+        
         producer.send("Bank_rates",bank_rates_dict)
+        time.sleep(7)
