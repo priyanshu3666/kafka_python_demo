@@ -23,7 +23,7 @@ for num in range(len(product_title)):
         temp_dict['winning_year']  =  "Never wins a Trophy"        
     ipl_data_dict[f'{title}'] =temp_dict
      
-print(ipl_data_dict)
+
 file_name = 'ipl_team_csv.csv'
 fields = ['title', 'venue', 'winning_year']
 def dict_to_csv():
@@ -34,3 +34,6 @@ def dict_to_csv():
                 csv_writer_.writerow({field: ipl_data_dict[key].get(field) or key for field in fields})
 
 dict_to_csv() #function called
+
+def ipl_detail():
+    return ipl_data_dict
